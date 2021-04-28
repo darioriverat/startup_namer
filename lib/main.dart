@@ -12,12 +12,8 @@ class Home extends StatelessWidget {
         appBar: AppBar(title: Text('Title')),
         body: Center(
           child: RandomWords(),
-        ));
-  }
-
-  Widget _buildSuggestions() {
-    final wordPair = WordPair.random();
-    return Text(wordPair.asPascalCase);
+        )
+    );
   }
 }
 
