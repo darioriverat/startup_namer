@@ -8,12 +8,7 @@ void main() {
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(title: Text('Title')),
-        body: Center(
-          child: RandomWords(),
-        )
-    );
+    return RandomWords();
   }
 }
 
@@ -29,7 +24,12 @@ class _RandomWordsState extends State<RandomWords> {
 
   @override
   Widget build(BuildContext context) {
-    return _buildSuggestions();
+    return Scaffold(
+        appBar: AppBar(title: Text('Title')),
+        body: Center(
+          child: _buildSuggestions(),
+        )
+    );
   }
 
   Widget _buildSuggestions() {
